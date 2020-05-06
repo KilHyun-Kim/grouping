@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Responsive from "./Responsive";
-import palette from "../../lib/styles/palette";
-import Button from "./Button";
+// import palette from "../../lib/styles/palette";
+// import Button from "./Button";
 
 const HeaderBlock = styled.div`
   position: fixed;
@@ -49,8 +49,11 @@ const Wrapper = styled(Responsive)`
  
  */
 
-const Spacer = styled.div`
-  height: 4rem;
+export const Spacer = styled.div`
+  height: ${(props) => {
+    if (props.doubleRem) return "8rem";
+    else return "4rem";
+  }};
 `;
 
 const UserInfo = styled.div`
@@ -81,7 +84,8 @@ const Haeder = () => {
           </div>
           <div className="right">
             <UserInfo>길현이</UserInfo>
-            <Button>로그인</Button>
+            {/* 로그인 버튼으로 바꾸기, link 넣어주기 */}
+            <Link to="login">로그인</Link>
           </div>
         </Wrapper>
       </HeaderBlock>

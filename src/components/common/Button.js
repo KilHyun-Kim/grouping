@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import palette from "../../lib/styles/palette";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const StyledButton = styled.button`
   border: none;
@@ -12,11 +12,12 @@ const StyledButton = styled.button`
   cursor: pointer;
   background: ${(props) => {
     if (props.search) return "white";
-    else return palette.gray[3];
+    else return palette.gray[9];
   }};
 
   color: ${(props) => {
     if (props.search) return "black";
+    else return "white";
   }};
   height: ${(props) => {
     if (props.search) return "4rem";
