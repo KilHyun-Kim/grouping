@@ -43,6 +43,20 @@ const Wrapper = styled(Responsive)`
     padding: 0;
   }
 `;
+
+const LogoWrapper = styled.div`
+  display: flex;
+  ._logoType {
+    /* 
+    line-height 잡아주기; 
+    */
+    line-height: 180%;
+    margin: 0;
+    padding-left: 0.5rem;
+    font-weight: bold;
+  }
+`;
+
 /**
  * 헤더가 fixed로 되어 있기 때문에 페이지의 콘텐츠가
  * 4rem 아래에 나타나게 해 주는 컴포넌트
@@ -61,18 +75,27 @@ const UserInfo = styled.div`
   margin-right: 1rem;
 `;
 
-const Haeder = () => {
+const Header = ({ type, logoType }) => {
   return (
     <>
       <HeaderBlock>
         <Wrapper>
-          <Link to="/" className="logo">
-            Grouping
-          </Link>
+          <LogoWrapper>
+            <Link to="/" className="logo">
+              Grouping
+            </Link>
+            {type ? (
+              <a href={"/" + type} className="_logoType">
+                {logoType}
+              </a>
+            ) : (
+              <></>
+            )}
+          </LogoWrapper>
           <div className="category">
             <ul>
               <li>
-                <Link to="region">직업별</Link>
+                <Link to="/job">지역/직업별</Link>
               </li>
               <li>
                 <Link to="job">자격증 </Link>
@@ -94,4 +117,4 @@ const Haeder = () => {
   );
 };
 
-export default Haeder;
+export default Header;

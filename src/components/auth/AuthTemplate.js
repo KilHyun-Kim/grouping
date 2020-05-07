@@ -40,7 +40,6 @@ const WhiteBox = styled.div`
 `;
 
 const AuthTemplate = ({ children }) => {
-  console.log(children.props.type);
   return (
     <AuthTemplateBlock>
       <WhiteBox>

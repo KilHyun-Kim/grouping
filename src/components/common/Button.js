@@ -26,6 +26,9 @@ const StyledButton = styled.button`
     if (props.search) return "0 4px 4px 0";
     else return "4px";
   }};
+  border-top: 0.5px solid #000;
+  border-bottom: 0.5px solid #000;
+  border-right: 0.5px solid #000;
 `;
 
 // const StyledLink = styled(Link)`

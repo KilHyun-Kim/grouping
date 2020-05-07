@@ -24,17 +24,6 @@ const SearchBlock = styled(Responsive)`
     padding-top: 20%;
     text-align: center;
   }
-
-  animation: fadeIn 1s linear;
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0.5;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 `;
 
 const SerachWrapper = styled.div`
@@ -45,6 +34,7 @@ const SerachWrapper = styled.div`
 const awesomeCard = css`
   background-color: white;
   padding-left: 18px;
+  padding-right: 18px;
   border-radius: 5px 0 0 5px;
 `;
 
@@ -55,7 +45,10 @@ const SearchInput = styled.input.attrs({
   height: 4rem;
   font-size: 1.4rem;
   color: #000;
-  border: 0;
+  border-top: 0.5px solid #000;
+  border-bottom: 0.5px solid #000;
+  border-left: 0.5px solid #000;
+  border-right: 0;
   ${awesomeCard};
   &:focus {
     outline: none;
@@ -73,6 +66,11 @@ const SearchTagWrapper = styled.div`
       line-height: 30px;
       font-weight: bold;
       color: black;
+      border-radius: 5px;
+      border: 0.5px solid #000;
+      padding: 0.2rem 0.5rem;
+
+      background-color: white;
       &:hover {
         text-decoration: underline;
       }
@@ -90,8 +88,11 @@ const SearchImage = styled.img.attrs({
 const HashImage = styled.img.attrs({
   src: "https://static.thenounproject.com/png/337475-200.png",
 })`
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #000;
+  border-radius: 5px;
 `;
 
 // const CheerUpTag = styled.div`
