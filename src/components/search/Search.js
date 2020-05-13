@@ -56,20 +56,20 @@ const SearchInput = styled.input.attrs({
 `;
 const SearchTagWrapper = styled.div`
   width: 100%;
-  padding-top: 1rem;
   margin: 0 auto;
+  padding-top: 2%;
   ul {
     display: flex;
 
     a {
+      font-size: 0.8rem;
       margin-left: 20px;
-      line-height: 30px;
-      font-weight: bold;
+      line-height: 20px;
       color: black;
       border-radius: 5px;
       border: 0.5px solid #000;
-      padding: 0.2rem 0.5rem;
-
+      padding: 0.5rem;
+      font-weight: bold;
       background-color: white;
       &:hover {
         text-decoration: underline;
@@ -89,7 +89,6 @@ const HashImage = styled.img.attrs({
   src: "https://static.thenounproject.com/png/337475-200.png",
 })`
   width: 40px;
-  height: 40px;
   background-color: white;
   border: 1px solid #000;
   border-radius: 5px;

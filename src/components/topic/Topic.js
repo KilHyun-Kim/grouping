@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Responsive from "../common/Responsive";
 import TopicButtonList from "./TopicButtonList";
+import TopicScrollBlock from "./TopicScrollBlock";
 
 const TopicBlock = styled(Responsive)`
   width: 100%;
@@ -41,10 +42,12 @@ const TopicSearchWrapper = styled.div`
 `;
 
 const TopicSearchDivBox = styled.div`
-  border: 1px solid #000;
+  border: 1px solid skyblue;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   width: 80%;
   margin: 0 auto;
-  height: 18rem;
+  height: 13rem;
 `;
 
 // event 함수
@@ -73,7 +76,9 @@ const Topic = ({ topic }) => {
         <TopicSearchWrapper>
           <TopicButtonList />
         </TopicSearchWrapper>
-        <TopicSearchDivBox></TopicSearchDivBox>
+        <TopicSearchDivBox>
+          <TopicScrollBlock />
+        </TopicSearchDivBox>
       </TopicSearchBlock>
     </TopicBlock>
   );

@@ -2,13 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Responsive from "./Responsive";
+import Navbar from "../navbar/Navbar";
 // import palette from "../../lib/styles/palette";
 // import Button from "./Button";
 
 const HeaderBlock = styled.div`
   position: fixed;
+  color: white;
   width: 100%;
-  background: #fff;
+  background: skyblue;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 `;
 
@@ -30,29 +32,17 @@ const Wrapper = styled(Responsive)`
     display: flex;
     align-items: center;
   }
-  .category {
-    width: 50%;
-    font-size: 1rem;
-    font-weight: 800;
-  }
-  .category ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
 `;
 
 const LogoWrapper = styled.div`
   display: flex;
+  width: 20%;
+  line-height: 4rem;
+
+  height: 4rem;
   ._logoType {
-    /* 
-    line-height 잡아주기; 
-    */
-    line-height: 180%;
-    margin: 0;
-    padding-left: 0.5rem;
+    padding-left: 0.6rem;
+    padding-top: 0.2rem;
     font-weight: bold;
   }
 `;
@@ -92,19 +82,8 @@ const Header = ({ type, logoType }) => {
               <></>
             )}
           </LogoWrapper>
-          <div className="category">
-            <ul>
-              <li>
-                <Link to="/job">지역/직업별</Link>
-              </li>
-              <li>
-                <Link to="job">자격증 </Link>
-              </li>
-              <li>
-                <Link to="">어학</Link>
-              </li>
-            </ul>
-          </div>
+          <Navbar />
+
           <div className="right">
             <UserInfo>길현이</UserInfo>
             {/* 로그인 버튼으로 바꾸기, link 넣어주기 */}

@@ -19,9 +19,9 @@ const StyledButton = styled.button`
     if (props.search) return "black";
     else return "white";
   }};
-  height: ${(props) => {
-    if (props.search) return "4rem";
-  }};
+  /* height: ${(props) => {
+    if (props.search) return "100%";
+  }}; */
   border-radius: ${(props) => {
     if (props.search) return "0 4px 4px 0";
     else return "4px";
