@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 const TopicSearchLi = styled.li`
   :nth-child(2) {
-    border-left: 1px solid skyblue;
-    border-right: 1px solid skyblue;
+    border-left: 1px solid #4a69bd;
+    border-right: 1px solid #4a69bd;
   }
 `;
 
@@ -37,7 +37,7 @@ const TopicSearchButton = ({ children }) => {
   const SearchButtonOn = styled.button`
     width: 100%;
     height: 100%;
-    color: skyblue;
+    color: #4a69bd;
     padding: 10px;
     background-color: white;
     cursor: pointer;
@@ -52,9 +52,9 @@ const TopicSearchButton = ({ children }) => {
     height: 100%;
     color: white;
     padding: 10px;
-    background-color: skyblue;
+    background-color: #4a69bd;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
     border: 0;
     outline: 0;

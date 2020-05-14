@@ -7,7 +7,7 @@ import { IoIosSearch } from "react-icons/io";
 const TopicButtonUl = styled.ul`
   width: 100%;
   display: flex;
-  border: 1px solid skyblue;
+  border: 1px solid #4a69bd;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   .search_section {
@@ -24,11 +24,8 @@ const TopicButtonList = () => {
         <FiMapPin />
         지역 선택
       </TopicSearchButton>
-      <TopicSearchButton>직업 선택</TopicSearchButton>
-      <TopicSearchButton>
-        <IoIosSearch />
-        검색어
-      </TopicSearchButton>
+      <TopicSearchButton>경력</TopicSearchButton>
+      <TopicSearchButton></TopicSearchButton>
     </TopicButtonUl>
   );
 };

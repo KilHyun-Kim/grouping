@@ -10,7 +10,7 @@ const ScrollWrapper = styled.div`
   border-bottom-left-radius: 4px;
   ::-webkit-scrollbar {
     width: 11px;
-    background-color: skyblue;
+    background-color: #4a69bd;
   }
   ::-webkit-scrollbar-thumb {
     background-color: white;
@@ -19,13 +19,12 @@ const ScrollWrapper = styled.div`
     border: 2px solid transparent;
   }
   ::-webkit-scrollbar-track {
-    background-color: skyblue;
+    background-color: #4a69bd;
   }
 `;
 
 const ScrollInnerBlock = styled.div`
   width: 100%;
-  height: 300px;
   background: white;
 `;
 

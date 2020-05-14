@@ -7,17 +7,16 @@ const WebIntroWrapper = styled.div`
   width: 100%;
   height: 41rem;
   background-size: 100% 100%;
-  z-index: -1;
 `;
 
 const WebIntroDiv = styled.div`
   width: 90%;
   margin: 0 auto;
+  margin-left: 5rem;
+
   h1,
   h2 {
-    color: skyblue;
-    margin-left: 2rem;
-    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    color: white;
   }
 `;
 const WebTopic = styled.div`
@@ -25,8 +24,6 @@ const WebTopic = styled.div`
   padding-top: 5rem;
   padding-bottom: 3rem;
   color: white;
-
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 `;
 
 const WebIntro = ({ backImage, Topic, express, tech }) => {

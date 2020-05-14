@@ -10,15 +10,15 @@ const RegionButton = styled.button`
   border: 0;
   background-color: white;
   text-align: left;
-  padding: 0%;
+  color: #4a69bd;
   display: flex;
-  font-size: 0.8rem;
+  font-size: 1rem;
   justify-content: space-around;
   .invisiable {
-    display: none;
+    visibility: hidden;
   }
   .visiable {
-    display: block;
+    visibility: visible;
   }
 `;
 
@@ -26,6 +26,22 @@ const TopicRegion = () => {
   const [regions, setRegions] = useState([
     { id: 1, city: "서울" },
     { id: 2, city: "경기" },
+    { id: 3, city: "인천" },
+    { id: 4, city: "부산" },
+    { id: 5, city: "대구" },
+    { id: 6, city: "광주" },
+    { id: 7, city: "대전" },
+    { id: 8, city: "울산" },
+    { id: 9, city: "세종" },
+    { id: 10, city: "강원" },
+    { id: 11, city: "경남" },
+    { id: 12, city: "경북" },
+    { id: 13, city: "전남" },
+    { id: 14, city: "전북" },
+    { id: 15, city: "충남" },
+    { id: 15, city: "충북" },
+    { id: 15, city: "제주" },
+    { id: 15, city: "전국" },
   ]);
   const [toggle, setToggle] = useState(false);
   //   const regions = [
@@ -53,9 +69,10 @@ const TopicRegion = () => {
     const target = e.target.childNodes[1];
     if (toggle) {
       setToggle(!toggle);
-      target.classList = "visiable";
-    } else {
       target.classList = "invisiable";
+    } else {
+      target.classList = "visiable";
+
       setToggle(!toggle);
     }
   };
@@ -69,7 +86,7 @@ const TopicRegion = () => {
     <RegionLi key={region.id}>
       <RegionButton onClick={handleToggle}>
         {region.city}
-        <AiOutlineRight className="unvisiable" />
+        <AiOutlineRight className="invisiable" />
       </RegionButton>
     </RegionLi>
   ));

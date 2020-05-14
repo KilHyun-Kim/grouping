@@ -5,7 +5,7 @@ import MainPage from "./pages/MainPage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import WebPage from "./pages/WebPage";
-import WebDesignerPage from "./pages/WebDesignerPage";
+import JobPage from "./pages/JobPage";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
     <>
       <Route component={MainPage} path="/" exact />
       <Route component={WebPage} path="/web" />
-      <Route component={WebDesignerPage} path="/web/webdesigner" />
+      <Route component={JobPage} path="/job" />
       {/* <Route component={} path="/@:username" exact />*/}
       <Route component={LoginPage} path="/login" />
       <Route component={RegisterPage} path="/register" />

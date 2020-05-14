@@ -18,10 +18,12 @@ const TopicBlock = styled(Responsive)`
 `;
 
 const TopicWrapper = styled.div`
-  width: 100%;
+  width: 90%;
   height: 2rem;
   top: 5rem;
-  margin: 5rem auto 0;
+  color: #4a69bd;
+  margin: 5rem auto 2rem;
+  font-size: 2rem;
   h2 {
     margin: 0;
     letter-spacing: 1px;
@@ -42,7 +44,7 @@ const TopicSearchWrapper = styled.div`
 `;
 
 const TopicSearchDivBox = styled.div`
-  border: 1px solid skyblue;
+  border: 1px solid #4a69bd;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   width: 80%;
