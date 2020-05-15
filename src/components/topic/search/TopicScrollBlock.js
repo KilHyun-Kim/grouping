@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import TopicRegion from "./region/TopicRegion";
+import TopicRegion from "../region/TopicRegion";
 
 const ScrollWrapper = styled.div`
+  display: inline-block;
   height: 100%;
-  width: 33.7%;
   overflow: auto;
   position: relative;
   border-bottom-left-radius: 4px;

@@ -1,4 +1,6 @@
 const palette = {
+  blue: ["#4a69bd"],
+  white: ["#ffffff"],
   gray: [
     "#f8f9fa",
     "#f1f3f5",

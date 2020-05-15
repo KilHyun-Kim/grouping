@@ -4,6 +4,7 @@ import { AiOutlineRight } from "react-icons/ai";
 const RegionLi = styled.li`
   width: 50%;
   display: inline-block;
+  margin: 0.3rem 0;
 `;
 const RegionButton = styled.button`
   width: 100%;
@@ -39,9 +40,9 @@ const TopicRegion = () => {
     { id: 13, city: "전남" },
     { id: 14, city: "전북" },
     { id: 15, city: "충남" },
-    { id: 15, city: "충북" },
-    { id: 15, city: "제주" },
-    { id: 15, city: "전국" },
+    { id: 16, city: "충북" },
+    { id: 17, city: "제주" },
+    { id: 18, city: "전국" },
   ]);
   const [toggle, setToggle] = useState(false);
   //   const regions = [

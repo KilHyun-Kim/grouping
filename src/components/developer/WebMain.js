@@ -65,18 +65,24 @@ const WebMain = () => {
         Topic="WEB DESIGNER"
         express="웹 컨텐츠 제작에서 화면 레이아웃 및 디자인 구상"
         tech="PhotoShop / Ilustrator / InDesign / AdobeXD"
+        path1="/web/designer"
+        path2="/web"
       />
       <WebIntro
         backImage={styleFront}
         Topic="FRONTEND"
         express="사용자에게 직접 보이는 UI & UX 개발"
         tech="HTML / CSS / JavaScript / React / Vue.js"
+        path1="/web/frontend"
+        path2="/web"
       />
       <WebIntro
         backImage={styleBack}
         Topic="BACKEND"
         express="사용자의 요청에 따라 데이터를 제공 및 관리 "
         tech="Java / Python / Ruby / PHP"
+        path1="/web/backend"
+        path2="/web"
       />
     </WebPageWrapper>
   );

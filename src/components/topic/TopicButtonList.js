@@ -2,7 +2,6 @@ import React from "react";
 import TopicSearchButton from "./TopicSearchButton";
 import styled from "styled-components";
 import { FiMapPin } from "react-icons/fi";
-import { IoIosSearch } from "react-icons/io";
 
 const TopicButtonUl = styled.ul`
   width: 100%;
@@ -25,7 +24,6 @@ const TopicButtonList = () => {
         지역 선택
       </TopicSearchButton>
       <TopicSearchButton>경력</TopicSearchButton>
-      <TopicSearchButton></TopicSearchButton>
     </TopicButtonUl>
   );
 };

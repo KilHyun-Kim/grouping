@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Responsive from "../common/Responsive";
-import TopicButtonList from "./TopicButtonList";
-import TopicScrollBlock from "./TopicScrollBlock";
-
+import TopicSearchBlock from "./search/TopicSerchBlock";
+import TopicInfo from "./info/TopicInfo";
 const TopicBlock = styled(Responsive)`
-  width: 100%;
+  width: 80%;
   height: auto;
   margin-top: 0.2rem;
   padding: 0;
@@ -18,7 +17,7 @@ const TopicBlock = styled(Responsive)`
 `;
 
 const TopicWrapper = styled.div`
-  width: 90%;
+  width: 100%;
   height: 2rem;
   top: 5rem;
   color: #4a69bd;
@@ -28,28 +27,6 @@ const TopicWrapper = styled.div`
     margin: 0;
     letter-spacing: 1px;
   }
-`;
-
-const TopicSearchBlock = styled.div`
-  width: 100%;
-  height: auto;
-  margin-top: 4rem;
-`;
-
-const TopicSearchWrapper = styled.div`
-  display: flex;
-  width: 80%;
-  height: 3.5rem;
-  margin: 0 auto;
-`;
-
-const TopicSearchDivBox = styled.div`
-  border: 1px solid #4a69bd;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  width: 80%;
-  margin: 0 auto;
-  height: 13rem;
 `;
 
 // event 함수
@@ -74,14 +51,8 @@ const Topic = ({ topic }) => {
           <h2>{topic}</h2>
         </div>
       </TopicWrapper>
-      <TopicSearchBlock>
-        <TopicSearchWrapper>
-          <TopicButtonList />
-        </TopicSearchWrapper>
-        <TopicSearchDivBox>
-          <TopicScrollBlock />
-        </TopicSearchDivBox>
-      </TopicSearchBlock>
+      <TopicSearchBlock />
+      <TopicInfo />
     </TopicBlock>
   );
 };

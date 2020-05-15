@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 const TopicSearchLi = styled.li`
   :nth-child(2) {
+    flex-basis: 30%;
     border-left: 1px solid #4a69bd;
     border-right: 1px solid #4a69bd;
   }

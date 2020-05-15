@@ -65,7 +65,7 @@ const UserInfo = styled.div`
   margin-right: 1rem;
 `;
 
-const Header = ({ type, logoType }) => {
+const Header = () => {
   return (
     <>
       <HeaderBlock>
@@ -74,16 +74,8 @@ const Header = ({ type, logoType }) => {
             <Link to="/" className="logo">
               Grouping
             </Link>
-            {type ? (
-              <a href={"/" + type} className="_logoType">
-                {logoType}
-              </a>
-            ) : (
-              <></>
-            )}
           </LogoWrapper>
           <Navbar />
-
           <div className="right">
             <UserInfo>길현이</UserInfo>
             {/* 로그인 버튼으로 바꾸기, link 넣어주기 */}

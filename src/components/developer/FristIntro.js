@@ -55,9 +55,9 @@ const FristIntro = () => {
       <h2>스터디원들은 각 직군의 스킬이 향상됩니다.</h2>
       <NavigatorDiv>
         {/* 클릭시 화면 height 이동하기 */}
-        <a>웹 디자이너</a>
-        <a>프론트엔드</a>
-        <a>백엔드</a>
+        <p>웹 디자이너</p>
+        <p>프론트엔드</p>
+        <p>백엔드</p>
       </NavigatorDiv>
     </WebFristPageWrapper>
   );
