@@ -46,7 +46,7 @@ const write = handleActions(
       ...state,
       [key]: value, //특정 key 값을 업데이트
     }),
-    [WRITE_POST]: (state, { payload: post }) => ({
+    [WRITE_POST]: (state) => ({
       ...state,
       post: null,
       postError: null,

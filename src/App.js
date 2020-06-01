@@ -7,6 +7,8 @@ import LoginPage from "./pages/LoginPage";
 import WebPage from "./pages/WebPage";
 import JobPage from "./pages/JobPage";
 import WritePage from "./pages/WritePage";
+import PostPage from "./pages/PostPage";
+import PostListPage from "./pages/PostListPage";
 
 function App() {
   return (
@@ -15,10 +17,11 @@ function App() {
       <Route component={MainPage} path="/" exact />
       <Route component={WebPage} path="/web" exact />
       <Route component={JobPage} path="/web/designer" />
-      {/* <Route component={} path="/@:username" exact />*/}
+      <Route component={PostPage} path="/@:username/:postId" exact />
       <Route component={LoginPage} path="/login" />
       <Route component={RegisterPage} path="/register" />
       <Route component={WritePage} path="/write" />
+      <Route component={PostListPage} path={["/@username", "/"]} exact />
     </>
   );
 }

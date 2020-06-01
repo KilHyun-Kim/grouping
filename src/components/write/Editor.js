@@ -41,18 +41,22 @@ const Editor = ({ title, body, onChangeField }) => {
   const quillInstance = useRef(null); // Quill 인스턴스를 설정
 
   useEffect(() => {
-    quillInstance.current = new Quill(quillElement.current, {
-      theme: "bubble",
-      placeholder: "내용을 작성하세요.",
-      modules: {
-        toolbar: [
-          [{ header: "1" }, { header: "2" }],
-          ["bold", "italic", "underline", "strike"],
-          [{ list: "ordered" }, { list: "bullet" }],
-          ["blockquote", "code-block", "link", "image"],
-        ],
+    quillInstance.current = new Quill(
+      quillElement.current,
+      {
+        theme: "bubble",
+        placeholder: "내용을 작성하세요.",
+        modules: {
+          toolbar: [
+            [{ header: "1" }, { header: "2" }],
+            ["bold", "italic", "underline", "strike"],
+            [{ list: "ordered" }, { list: "bullet" }],
+            ["blockquote", "code-block", "link", "image"],
+          ],
+        },
       },
-    });
+      []
+    );
     // quill에 text-change 이벤트 핸들러 등록
     // https://quilljs.com/docs/api/#events
     const quill = quillInstance.current;

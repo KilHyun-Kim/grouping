@@ -1,6 +1,6 @@
 import React from "react";
 import Responsive from "../components/common/Responsive";
-import Header from "../components/common/Header";
+import HeaderContainer from "../containers/common/HeaderContainer";
 import Subject from "../components/common/Subject";
 import EditorContainer from "../containers/write/EditorContainer";
 import TagBoxContainer from "../containers/write/TagBoxContainer";
@@ -9,7 +9,7 @@ import Table from "../components/write/Table";
 const WritePage = () => {
   return (
     <>
-      <Header />
+      <HeaderContainer />
       <Responsive>
         <Subject subject={"웹 디자이너 스터디 그룹원 모집"} />
         <Table />

@@ -39,7 +39,7 @@ const WriteActionButtonsContainer = ({ history }) => {
     if (postError) {
       console.log(postError);
     }
-  }, [[history, post, postError]]);
+  }, [history, post, postError]);
 
   return <WriteActionButtons onPublish={onPublish} onCancel={onCancel} />;
 };
