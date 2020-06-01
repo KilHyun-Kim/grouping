@@ -7,16 +7,18 @@ import Responsive from "../common/Responsive";
 
 const EditorBlock = styled(Responsive)`
   /* 페이지 위아래 여백 지정 */
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
+  border: 1px solid ${palette.blue[0]};
+  border-radius: 4px;
 `;
 
 const TitleInput = styled.input`
-  font-size: 3rem;
+  font-size: 2rem;
   outline: none;
   padding-bottom: 0.5rem;
-  border: none;
-  border-bottom: 1px solid ${palette.gray[4]};
+  border: 0;
+  border-bottom: 1px solid ${palette.blue[0]};
   margin-bottom: 2rem;
   width: 100%;
 `;
