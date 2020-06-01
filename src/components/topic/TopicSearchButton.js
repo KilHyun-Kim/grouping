@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import palette from "../../lib/styles/palette";
 const TopicSearchLi = styled.li`
   :nth-child(2) {
     flex-basis: 30%;
-    border-left: 1px solid #4a69bd;
-    border-right: 1px solid #4a69bd;
+    border-left: 1px solid ${palette.blue[0]};
+    border-right: 1px solid ${palette.blue[0]};
   }
 `;
 
@@ -38,7 +39,7 @@ const TopicSearchButton = ({ children }) => {
   const SearchButtonOn = styled.button`
     width: 100%;
     height: 100%;
-    color: #4a69bd;
+    color: ${palette.blue[0]};
     padding: 10px;
     background-color: white;
     cursor: pointer;
@@ -53,7 +54,7 @@ const TopicSearchButton = ({ children }) => {
     height: 100%;
     color: white;
     padding: 10px;
-    background-color: #4a69bd;
+    background-color: ${palette.blue[0]};
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;

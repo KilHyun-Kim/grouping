@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/common/Header";
+
 import Topic from "../components/topic/Topic";
 
 const JobPage = () => {

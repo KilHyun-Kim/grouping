@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import palette from "../../lib/styles/palette";
 import { Link } from "react-router-dom";
 
 const CategoryUl = styled.ul`
@@ -27,17 +28,17 @@ const HoverCategoryWrapper = styled.div`
   width: 150px;
   left: -40px;
   top: 4rem;
-  border-left: 1px solid #4a69bd;
-  border-right: 1px solid #4a69bd;
+  border-left: 1px solid ${palette.blue[0]};
+  border-right: 1px solid ${palette.blue[0]};
 `;
 
 const HoverCategory = styled.ul`
-  color: #4a69bd;
+  color: ${palette.blue[0]};
 
   li {
     background-color: white;
     text-align: center;
-    border-bottom: 1px solid #4a69bd;
+    border-bottom: 1px solid ${palette.blue[0]};
   }
   li a {
     display: inline-block;
@@ -46,7 +47,7 @@ const HoverCategory = styled.ul`
     font-size: 0.9rem;
   }
   li:hover {
-    background-color: #4a69bd;
+    background-color: ${palette.blue[0]};
     color: white;
   }
 `;

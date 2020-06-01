@@ -6,6 +6,7 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import WebPage from "./pages/WebPage";
 import JobPage from "./pages/JobPage";
+import WritePage from "./pages/WritePage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       {/* <Route component={} path="/@:username" exact />*/}
       <Route component={LoginPage} path="/login" />
       <Route component={RegisterPage} path="/register" />
+      <Route component={WritePage} path="/write" />
     </>
   );
 }

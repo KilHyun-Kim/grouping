@@ -1,8 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import palette from "../../../lib/styles/palette";
 
 const CheckBoxBlock = styled.div`
+  width: 70%;
   display: flex;
+  height: 100%;
+  overflow: auto;
+  ::-webkit-scrollbar {
+    width: 11px;
+    background-color: ${palette.blue[0]};
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: ${palette.blue[0]};
+  }
   input[type="checkbox"] {
     -ms-transform: scale(1.5); /* IE */
     -moz-transform: scale(1.5); /* FF */
@@ -13,15 +30,16 @@ const CheckBoxBlock = styled.div`
     cursor: pointer;
     border: 1px solid #cacece;
   }
-  span {
-    height: 100%;
-    font-size: 0.9rem;
+  label {
+    cursor: pointer;
   }
 `;
 
 const CheckBoxLi = styled.li`
   display: inline-block;
   width: 30%;
+  padding-top: 0.5rem;
+  margin-left: 1rem;
 `;
 
 const TopicCheckBoxBlock = () => {
@@ -59,9 +77,7 @@ const TopicCheckBoxBlock = () => {
   const areaList = areas.seoul.map((area, index) => (
     <CheckBoxLi>
       <input type="checkbox" id={index} />
-      <label for={index}>
-        <span>{area}</span>
-      </label>
+      <label for={index}>{area}</label>
     </CheckBoxLi>
   ));
   return (

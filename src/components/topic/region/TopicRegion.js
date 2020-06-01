@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { AiOutlineRight } from "react-icons/ai";
+import palette from "../../../lib/styles/palette";
 const RegionLi = styled.li`
   width: 50%;
   display: inline-block;
@@ -11,7 +12,7 @@ const RegionButton = styled.button`
   border: 0;
   background-color: white;
   text-align: left;
-  color: #4a69bd;
+  color: #000;
   display: flex;
   font-size: 1rem;
   justify-content: space-around;

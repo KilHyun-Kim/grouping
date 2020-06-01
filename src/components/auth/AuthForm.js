@@ -24,7 +24,7 @@ const StyledInput = styled.input`
   border-bottom: 1px solid ${palette.gray[5]};
   padding-bottom: 0.5rem;
   outline: none;
-  width: 90%;
+  width: 100%;
   &:focus {
     color: $oc-teal-7;
     border-bottom: 1px solid ${palette.gray[7]};
@@ -54,37 +54,64 @@ const ButtonWidthMarginTop = styled(Button)`
   margin-top: 1rem;
 `;
 
-// const textMap = {
-//   login: "로그인",
-//   register: "회원가입",
-// };
+const Spacer = styled.div`
+  height: 2rem;
+`;
 
 /**
  * 에러를 보여준다.
  */
 
-// const ErrorMessage = styled.div`
-//   color: red;
-//   text-align: center;
-//   font-size: 0.875rem;
-//   margin-top: 1rem;
-// `;
+const ErrorMessage = styled.div`
+  color: red;
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+`;
 
-const AuthForm = ({ type }) => {
-  console.log(type);
+const textMap = {
+  login: "로그인",
+  register: "회원가입",
+};
+
+const AuthForm = ({ type, onSubmit, onChange, form, error }) => {
+  const text = textMap[type];
   return (
     <AuthFormBlock>
-      {/* <h3>로그인</h3> */}
-      <form>
-        <StyledInput placeholder="아이디" />
-        <StyledInput placeholder="비밀번호" />
-        {type === "register" && <StyledInput placeholder="비밀번호 확인" />}
-        {/* {error && <ErrorMessage>{error}</ErrorMessage>} */}
-        {type === "register" ? (
-          <ButtonWidthMarginTop>회원등록</ButtonWidthMarginTop>
-        ) : (
-          <ButtonWidthMarginTop>로그인</ButtonWidthMarginTop>
+      <h3>{text}</h3>
+      <form onSubmit={onSubmit}>
+        <StyledInput
+          placeholder="아이디"
+          autoComplete="username"
+          name="username"
+          onChange={onChange}
+          value={form.username}
+        />
+        <StyledInput
+          placeholder="비밀번호"
+          autoComplete="new-password"
+          name="password"
+          type="password"
+          onChange={onChange}
+          value={form.password}
+        />
+        {type === "register" && (
+          <>
+            <StyledInput
+              placeholder="비밀번호 확인"
+              autoComplete="new-password"
+              name="passwordConfirm"
+              type="password"
+              onChange={onChange}
+              value={form.passwordConfirm}
+            />
+            {/* <Spacer />
+            <StyledInput placeholder="이메일" /> */}
+          </>
         )}
+        {error && <ErrorMessage>{error}</ErrorMessage>}
+
+        <ButtonWidthMarginTop>{text}</ButtonWidthMarginTop>
       </form>
       <Footer>
         {type === "login" ? (

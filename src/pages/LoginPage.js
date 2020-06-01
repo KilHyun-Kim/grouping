@@ -1,14 +1,14 @@
 import React from "react";
-import Header from "../components/common/Header";
+import HeaderContainer from "../containers/common/HeaderContainer";
 import AuthTemplate from "../components/auth/AuthTemplate";
-import AuthForm from "../components/auth/AuthForm";
+import LoginForm from "../containers/auth/LoginForm";
 
 const LoginPage = () => {
   return (
     <>
-      <Header type="login" logoType="로그인" />
+      <HeaderContainer type="login" logoType="로그인" />
       <AuthTemplate>
-        <AuthForm type="login" />
+        <LoginForm />
       </AuthTemplate>
     </>
   );

@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import TopicRegion from "../region/TopicRegion";
+import palette from "../../../lib/styles/palette";
 
 const ScrollWrapper = styled.div`
+  width: 30%;
   display: inline-block;
   height: 100%;
   overflow: auto;
@@ -10,7 +12,7 @@ const ScrollWrapper = styled.div`
   border-bottom-left-radius: 4px;
   ::-webkit-scrollbar {
     width: 11px;
-    background-color: #4a69bd;
+    background-color: ${palette.blue[0]};
   }
   ::-webkit-scrollbar-thumb {
     background-color: white;
@@ -19,7 +21,7 @@ const ScrollWrapper = styled.div`
     border: 2px solid transparent;
   }
   ::-webkit-scrollbar-track {
-    background-color: #4a69bd;
+    background-color: ${palette.blue[0]};
   }
 `;
 

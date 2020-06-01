@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../components/common/Header";
+import HeaderContainer from "../containers/common/HeaderContainer";
 import Search from "../components/search/Search";
 const MainPage = () => {
   return (
     <>
-      <Header />
+      <HeaderContainer />
       <Search />
     </>
   );

@@ -1,6 +1,15 @@
 const palette = {
-  blue: ["#4a69bd"],
+  blue: [
+    "#8c8cbe",
+    "#17c0eb",
+    "#7158e2",
+    "#227093",
+    "#ced6e0",
+    "#30336b",
+    "#4a69bd",
+  ],
   white: ["#ffffff"],
+  trafficLight: ["#2ecc71", "#f7b731", "#e74c3c"],
   gray: [
     "#f8f9fa",
     "#f1f3f5",

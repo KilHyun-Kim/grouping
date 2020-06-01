@@ -13,9 +13,8 @@ const buttonStyle = css`
   outline: none;
   cursor: pointer;
   transition: 0.5s all ease-out;
-  width: 12%;
+  width: 100%;
   text-align: center;
-  margin: 10px;
   background-color: ${palette.blue[0]};
   &:hover {
     background-color: ${palette.white[0]};
