@@ -1,47 +1,45 @@
 import React from "react";
 import styled from "styled-components";
+import palette from "../../lib/styles/palette";
 
-const TableTag = styled.table`
+const TableTagBlock = styled.div`
   margin: 0 auto;
+  width: 100%;
   font-size: 1.25rem;
-  tr {
-    color: #000;
-  }
-  td.div {
-    overflow: auto;
-  }
+  color: ${palette.gray[8]};
 `;
 
 const TableTr = styled.tr``;
 
 const WriteTable = () => {
   return (
-    <TableTag>
-      <tr>
-        <th colSpan="2">필수요구사항</th>
-      </tr>
-      <tr>
-        <td>지역</td>
-        <td>
-          <ul>
-            <li>
-              <div>서울</div>
-            </li>
-            <li>
-              <div>부산</div>
-            </li>
+    <TableTagBlock>
+      <div
+        style={{ textAlign: "center", fontSize: "2rem", marginBottom: "2rem" }}
+      >
+        선택하세요
+      </div>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div style={{ display: "inline-block" }}>
+          <ul style={{ display: "flex" }}>
+            <li>지역</li>
+            <li>서울</li>
           </ul>
-        </td>
-      </tr>
-      <tr>
-        <td>모집인원</td>
-        <td>1 2 3 4 5 6</td>
-      </tr>
-      <tr>
-        <td>경력</td>
-        <td>신입 1년이상 2년이상 3년이상 5년이상</td>
-      </tr>
-    </TableTag>
+        </div>
+        <div style={{ display: "inline-block" }}>
+          <ul style={{ display: "flex" }}>
+            <li>모집인원</li>
+            <li>5명 이하</li>
+          </ul>
+        </div>
+        <div style={{ display: "inline-block" }}>
+          <ul style={{ display: "flex" }}>
+            <li>경력</li>
+            <li>1년이상</li>
+          </ul>
+        </div>
+      </div>
+    </TableTagBlock>
   );
 };
 

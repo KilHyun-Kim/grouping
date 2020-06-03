@@ -96,7 +96,7 @@ const Information = () => {
             <span>서울 장똘배기</span>
           </InformRegion>
           <InformTopic>
-            <span>웹 디자이너 구해요구합니다</span>
+            <span>#포토샵 #드로잉</span>
           </InformTopic>
           <InformCandidate>
             <span>1 / 5</span>

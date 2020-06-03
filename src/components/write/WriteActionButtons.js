@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Button from "../common/Button";
 
 const WriteActionButtonBlock = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
   display: flex;
+  width: 60%;
+  margin: 2rem auto 3rem;
   button + button {
     margin-left: 0.5rem;
   }

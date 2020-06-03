@@ -10,9 +10,10 @@ const SubjectWrapper = styled(Responsive)`
 `;
 
 const SubjectBlock = styled.div`
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: ${palette.gray[8]};
   text-align: center;
+  font-weight: bold;
 `;
 
 const Subject = ({ subject }) => {

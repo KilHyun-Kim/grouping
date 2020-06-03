@@ -7,7 +7,7 @@ const TagBoxBlock = styled.div`
   border-top: 1px solid ${palette.gray[2]};
   padding-top: 2rem;
   h4 {
-    color: ${palette.gray[8]};
+    color: ${palette.blue[0]};
     margin-top: 0;
     margin-bottom: 0.5rem;
   }
@@ -18,7 +18,7 @@ const TagForm = styled.form`
   overflow: hidden;
   display: flex;
   width: 256px;
-  border: 1px solid ${palette.gray[9]};
+  border: 1px solid ${palette.blue[0]};
   input,
   button {
     outline: none;
@@ -35,7 +35,7 @@ const TagForm = styled.form`
     padding-right: 1rem;
     padding-left: 1rem;
     border: none;
-    background: ${palette.gray[8]};
+    background: ${palette.blue[0]};
     color: white;
     font-weight: bold;
     &:hover {

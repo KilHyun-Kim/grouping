@@ -11,6 +11,8 @@ const EditorBlock = styled(Responsive)`
   padding-bottom: 5rem;
   border: 1px solid ${palette.blue[0]};
   border-radius: 4px;
+  padding-right: 2rem;
+  padding-left: 2rem;
 `;
 
 const TitleInput = styled.input`
@@ -18,9 +20,10 @@ const TitleInput = styled.input`
   outline: none;
   padding-bottom: 0.5rem;
   border: 0;
-  border-bottom: 1px solid ${palette.blue[0]};
+  border-bottom: 2px solid ${palette.blue[0]};
   margin-bottom: 2rem;
   width: 100%;
+  font-weight: bold;
 `;
 
 const QuillWrapper = styled.div`
