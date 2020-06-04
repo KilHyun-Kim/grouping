@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import Responsive from "../common/Responsive";
 import Button from "../common/Button";
 import palette from "../../lib/styles/palette";
-import Tags from "../common/Tags";
 import SubInfo from "../common/SubInfo";
+import Tags from "../common/Tags";
+import { Link } from "react-router-dom";
 
 const PostListBlock = styled(Responsive)`
   margin-top: 3rem;
@@ -20,19 +20,20 @@ const WritePostButtonWrapper = styled.div`
 const PostItemBlock = styled.div`
   padding-top: 3rem;
   padding-bottom: 3rem;
-  /* 맨위 포스트 padding top 제거 */
+  /* 맨 위 포스트는 padding-top 이 없음 */
   &:first-child {
     padding-top: 0;
   }
   & + & {
-    border-top: 1px solid ${palette.blue[0]};
+    border-top: 1px solid ${palette.gray[2]};
   }
+
   h2 {
     font-size: 2rem;
     margin-bottom: 0;
     margin-top: 0;
     &:hover {
-      color: ${palette.white[0]};
+      color: ${palette.gray[6]};
     }
   }
   p {
@@ -40,34 +41,9 @@ const PostItemBlock = styled.div`
   }
 `;
 
-// const SubInfo = styled.div`
-//   /* margin-top : 1rem; */
-//   color: ${palette.blue[0]};
-
-//   /* span 사이에 가운뎃점 문자 */
-//   span + span:before {
-//     color: ${palette.blue[0]};
-//     padding-left: 0.25rem;
-//     padding-right: 0.25rem;
-//     content: "\\B7";
-//   }
-// `;
-
-// const Tags = styled.div`
-//   margin-top: 0.5rem;
-//   .tag {
-//     display: inline-block;
-//     color: ${palette.blue[0]};
-//     text-decoration: none;
-//     margin-right: 0.5rem;
-//     &:hover {
-//       color: ${palette.white[0]};
-//     }
-//   }
-// `;
-
-const PostItem = ({ post }) => {
+const Postitem = ({ post }) => {
   const { publishedDate, user, tags, title, body, _id } = post;
+
   return (
     <PostItemBlock>
       <h2>
@@ -84,21 +60,24 @@ const PostItem = ({ post }) => {
 };
 
 const PostList = ({ posts, loading, error, showWriteButton }) => {
+  // 에러 발생시
   if (error) {
-    return (
-      console.log(error), (<PostListBlock>오류가 발생했습니다.</PostListBlock>)
-    );
+    return <PostListBlock>에러가 발생했습니다.</PostListBlock>;
   }
   return (
     <PostListBlock>
       <WritePostButtonWrapper>
-        {showWriteButton && <Button to="/write">새 글 작성하기</Button>}
+        {showWriteButton && (
+          <Button cyan to="/write">
+            새 글 작성하기
+          </Button>
+        )}
       </WritePostButtonWrapper>
-      {/* 로딩중이 아니고, 포스트 배열이 존재할 때만 보여줌. */}
+      {/* 로딩 중이 아니고, 포스트 배열이 존재할 때만 보여 줌 */}
       {!loading && posts && (
         <div>
           {posts.map((post) => (
-            <PostItem post={post} key={post._id} />
+            <Postitem post={post} key={post._id} />
           ))}
         </div>
       )}

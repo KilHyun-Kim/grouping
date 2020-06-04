@@ -7,25 +7,25 @@ import { takeLatest } from "redux-saga/effects";
 
 const INITIALIZE = "write/INITIALIZE";
 const CHANGE_FIELD = "write/CHANGE_FIELD";
+
 const [
   WRITE_POST,
   WRITE_POST_SUCCESS,
   WRITE_POST_FAILURE,
-] = createRequestActionTypes("write/WRITE_POST"); // 포스트 작성
+] = createRequestActionTypes("write/WRITE_POST");
 
 export const initialize = createAction(INITIALIZE);
 export const changeField = createAction(CHANGE_FIELD, ({ key, value }) => ({
   key,
   value,
 }));
-
+// createAction 에 두번째 인자 체크
 export const writePost = createAction(WRITE_POST, ({ title, body, tags }) => ({
   title,
   body,
   tags,
 }));
 
-// 사가생성
 const writePostSaga = createRequestSaga(WRITE_POST, postsAPI.writePost);
 export function* writeSaga() {
   yield takeLatest(WRITE_POST, writePostSaga);
@@ -35,8 +35,6 @@ const initialState = {
   title: "",
   body: "",
   tags: [],
-  post: null,
-  postError: null,
 };
 
 const write = handleActions(
@@ -44,10 +42,11 @@ const write = handleActions(
     [INITIALIZE]: (state) => initialState, // initialState를 넣으면 초기 상태로 바뀜
     [CHANGE_FIELD]: (state, { payload: { key, value } }) => ({
       ...state,
-      [key]: value, //특정 key 값을 업데이트
+      [key]: value,
     }),
     [WRITE_POST]: (state) => ({
       ...state,
+      // post와 postError 를 초기화
       post: null,
       postError: null,
     }),

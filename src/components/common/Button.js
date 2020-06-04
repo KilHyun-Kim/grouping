@@ -20,6 +20,11 @@ const buttonStyle = css`
     background-color: ${palette.white[0]};
     color: ${palette.blue[0]};
   }
+  &:disabled {
+    background: ${palette.blue[0]};
+    color: ${palette.white[0]};
+    cursor: not-allowed;
+  }
   ${(props) =>
     props.fullWidth &&
     css`

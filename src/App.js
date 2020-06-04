@@ -14,14 +14,14 @@ function App() {
   return (
     // router 간단하게 표시하는법 다시
     <>
-      <Route component={MainPage} path="/" exact />
+      {/* <Route component={MainPage} path="/" exact /> */}
       <Route component={WebPage} path="/web" exact />
       <Route component={JobPage} path="/web/designer" />
-      <Route component={PostPage} path="/@:username/:postId" exact />
+      <Route component={PostPage} path="/@:username/:postId" />
       <Route component={LoginPage} path="/login" />
       <Route component={RegisterPage} path="/register" />
       <Route component={WritePage} path="/write" />
-      <Route component={PostListPage} path={["/@username", "/"]} exact />
+      <Route component={PostListPage} path={["/@:username", "/"]} exact />
     </>
   );
 }
