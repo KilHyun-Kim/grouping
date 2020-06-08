@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import palette from "../../../lib/styles/palette";
+import PostListContainer from "../../../containers/posts/PostListContainer";
+import PaginationContainer from "../../../containers/posts/PaginationContainer";
 
 const InformBlock = styled.div`
   padding: 1rem;
@@ -46,27 +48,27 @@ const InformSecondBlock = styled.div`
   }
 `;
 // FirstBlock
-const InformDate = styled.div`
-  width: 10%;
-  /* font-size: 1.5rem; */
-`;
-const InformTopic = styled.div`
-  width: 30%;
-  text-align: left;
-`;
-const InformCandidate = styled.div`
-  width: 15%;
-  font-size: 1.5rem;
-  padding: 0.7rem 0;
-  color: #fff;
-  border-radius: 5px;
-  background-color: ${palette.trafficLight[0]};
-  span {
-  }
-`;
-const InformRegion = styled.div`
-  width: 30%;
-`;
+// const InformDate = styled.div`
+//   width: 10%;
+//   /* font-size: 1.5rem; */
+// `;
+// const InformTopic = styled.div`
+//   width: 30%;
+//   text-align: left;
+// `;
+// const InformCandidate = styled.div`
+//   width: 15%;
+//   font-size: 1.5rem;
+//   padding: 0.7rem 0;
+//   color: #fff;
+//   border-radius: 5px;
+//   background-color: ${palette.trafficLight[0]};
+//   span {
+//   }
+// `;
+// const InformRegion = styled.div`
+//   width: 30%;
+// `;
 
 const GrayBar = styled.span`
   margin: 0 7px;
@@ -83,40 +85,45 @@ const InformDead = styled.div``;
 const InformPlace = styled.div``;
 const Information = () => {
   return (
-    <InformBlock>
-      <div style={{ width: "5%", textAlign: "center", paddingTop: "3rem" }}>
-        <span>1</span>
-      </div>
-      <div style={{ width: "95%" }}>
-        <InformFirstBlock>
-          <InformDate>
-            <span>5/15</span>
-          </InformDate>
-          <InformRegion>
-            <span>서울 장똘배기</span>
-          </InformRegion>
-          <InformTopic>
-            <span>#포토샵 #드로잉</span>
-          </InformTopic>
-          <InformCandidate>
-            <span>1 / 5</span>
-          </InformCandidate>
-        </InformFirstBlock>
-        <InformSecondBlock>
-          <InformDead>
-            <span>모집 기간 : 5/16~5/17</span>
-          </InformDead>
-          <InformTech>
-            <span>사용 기술 : PhotoShop</span>
-            <GrayBar />
-            <span>경력 : 신입</span>
-          </InformTech>
-          {/* <InformPlace>
+    <>
+      {/* <InformBlock>
+        <div style={{ width: "5%", textAlign: "center", paddingTop: "3rem" }}>
+          <span>1</span>
+        </div>
+        <div style={{ width: "95%" }}>
+          <InformFirstBlock>
+            <InformDate>
+              <span>5/15</span>
+            </InformDate>
+            <InformRegion>
+              <span>서울 장똘배기</span>
+            </InformRegion>
+            <InformTopic>
+              <span>#포토샵 #드로잉</span>
+            </InformTopic>
+            <InformCandidate>
+              <span>1 / 5</span>
+            </InformCandidate>
+          </InformFirstBlock>
+          <InformSecondBlock>
+            <InformDead>
+              <span>모집 기간 : 5/16~5/17</span>
+            </InformDead>
+            <InformTech>
+              <span>사용 기술 : PhotoShop</span>
+              <GrayBar />
+              <span>경력 : 신입</span>
+            </InformTech>
+             <InformPlace>
             <span>위치: 어디어디어디</span>
-          </InformPlace> */}
-        </InformSecondBlock>
-      </div>
-    </InformBlock>
+          </InformPlace>
+          </InformSecondBlock>
+        </div>
+      </InformBlock> */}
+
+      <PostListContainer />
+      <PaginationContainer />
+    </>
   );
 };
 

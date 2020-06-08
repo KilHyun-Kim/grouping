@@ -15,7 +15,7 @@ const WritePage = () => {
       </Helmet>
       <HeaderContainer />
       <Responsive>
-        <Subject subject={"웹 디자이너 스터디 그룹원 모집"} />
+        <Subject subject={"웹 디자이너 그룹원 모집"} />
         <Table />
         <EditorContainer />
         <TagBoxContainer />

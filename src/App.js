@@ -14,7 +14,7 @@ function App() {
   return (
     // router 간단하게 표시하는법 다시
     <>
-      {/* <Route component={MainPage} path="/" exact /> */}
+      <Route component={MainPage} path="/" exact />
       <Helmet>
         <title>GroupingPong</title>
       </Helmet>

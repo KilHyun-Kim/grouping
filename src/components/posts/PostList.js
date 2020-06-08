@@ -7,9 +7,7 @@ import SubInfo from "../common/SubInfo";
 import Tags from "../common/Tags";
 import { Link } from "react-router-dom";
 
-const PostListBlock = styled(Responsive)`
-  margin-top: 3rem;
-`;
+const PostListBlock = styled.div``;
 
 const WritePostButtonWrapper = styled.div`
   display: flex;
@@ -17,9 +15,28 @@ const WritePostButtonWrapper = styled.div`
   margin-bottom: 3rem;
 `;
 
+const PostItemWrapper = styled.div`
+  display: flex;
+  text-align: center;
+  padding: 3rem 3rem 3rem 0;
+  margin: 1rem;
+  border-bottom: 1px solid #efefef;
+  box-shadow: rgb(204, 204, 204) 0px 10px 20px;
+  display: flex;
+  &:hover {
+    /* transition 추가 */
+  }
+  p {
+    font-size: 1.5rem;
+  }
+`;
+
+const PostSortNum = styled.div`
+  width: 10%;
+`;
+
 const PostItemBlock = styled.div`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  width: 30%;
   /* 맨 위 포스트는 padding-top 이 없음 */
   &:first-child {
     padding-top: 0;
@@ -41,21 +58,45 @@ const PostItemBlock = styled.div`
   }
 `;
 
+const PostRegionBlock = styled.div`
+  width: 30%;
+`;
+const PostCandidateBlock = styled.div`
+  width: 30%;
+  text-align: right;
+  font-size: 1.5rem;
+  padding: 0.7rem 0;
+  color: #fff;
+  border-radius: 5px;
+  background-color: ${palette.trafficLight[0]};
+  span {
+  }
+`;
+
 const Postitem = ({ post }) => {
   const { publishedDate, user, tags, title, body, _id } = post;
 
   return (
-    <PostItemBlock>
-      <h2>
-        <Link to={`/@${user.username}/${_id}`}>{title}</Link>
-      </h2>
-      <SubInfo
+    <PostItemWrapper>
+      <PostSortNum>글번호</PostSortNum>
+      <PostItemBlock>
+        <h2>
+          <Link to={`/@${user.username}/${_id}`}>{title}</Link>
+        </h2>
+        <Tags tags={tags} />
+        {/* <SubInfo
         username={user.username}
         publishedDate={new Date(publishedDate)}
-      />
-      <Tags tags={tags} />
-      <p>{body}</p>
-    </PostItemBlock>
+      /> */}
+        {/* <p>{body}</p> */}
+      </PostItemBlock>
+      <PostRegionBlock>
+        <p>지역입니다</p>
+      </PostRegionBlock>
+      <PostCandidateBlock>
+        <p>참가자 입니다</p>
+      </PostCandidateBlock>
+    </PostItemWrapper>
   );
 };
 

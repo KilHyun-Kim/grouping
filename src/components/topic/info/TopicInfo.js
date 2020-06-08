@@ -3,6 +3,11 @@ import styled from "styled-components";
 import Infomation from "./Information";
 import palette from "../../../lib/styles/palette";
 
+const INFO_SORT_NUM = "글번호";
+const INFO_TITLE = "작성일";
+const INFO_REGITON = "지역";
+const INFO_CANDIDATE = "참여현황";
+
 const InfoWrapper = styled.div`
   margin-top: 2rem;
   width: 100%;
@@ -40,10 +45,10 @@ const TopicInfo = () => {
   return (
     <InfoWrapper>
       <InfoListHead>
-        <span>작성일</span>
-        <span>지역</span>
-        <span>제목</span>
-        <span>참여현황</span>
+        <span>{INFO_SORT_NUM}</span>
+        <span>{INFO_TITLE}</span>
+        <span>{INFO_REGITON}</span>
+        <span>{INFO_CANDIDATE}</span>
       </InfoListHead>
       <Infomation />
     </InfoWrapper>
