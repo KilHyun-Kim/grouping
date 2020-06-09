@@ -86,41 +86,6 @@ const InformPlace = styled.div``;
 const Information = () => {
   return (
     <>
-      {/* <InformBlock>
-        <div style={{ width: "5%", textAlign: "center", paddingTop: "3rem" }}>
-          <span>1</span>
-        </div>
-        <div style={{ width: "95%" }}>
-          <InformFirstBlock>
-            <InformDate>
-              <span>5/15</span>
-            </InformDate>
-            <InformRegion>
-              <span>서울 장똘배기</span>
-            </InformRegion>
-            <InformTopic>
-              <span>#포토샵 #드로잉</span>
-            </InformTopic>
-            <InformCandidate>
-              <span>1 / 5</span>
-            </InformCandidate>
-          </InformFirstBlock>
-          <InformSecondBlock>
-            <InformDead>
-              <span>모집 기간 : 5/16~5/17</span>
-            </InformDead>
-            <InformTech>
-              <span>사용 기술 : PhotoShop</span>
-              <GrayBar />
-              <span>경력 : 신입</span>
-            </InformTech>
-             <InformPlace>
-            <span>위치: 어디어디어디</span>
-          </InformPlace>
-          </InformSecondBlock>
-        </div>
-      </InformBlock> */}
-
       <PostListContainer />
       <PaginationContainer />
     </>

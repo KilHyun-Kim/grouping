@@ -5,7 +5,7 @@ import styled from "styled-components";
 import palette from "../../lib/styles/palette";
 import Responsive from "../common/Responsive";
 
-const EditorBlock = styled(Responsive)`
+const EditorBlock = styled.div`
   /* 페이지 위아래 여백 지정 */
   padding-top: 2rem;
   padding-bottom: 5rem;
@@ -20,7 +20,7 @@ const TitleInput = styled.input`
   outline: none;
   padding-bottom: 0.5rem;
   border: 0;
-  border-bottom: 2px solid ${palette.blue[0]};
+  border-bottom: 1px solid ${palette.gray[5]};
   margin-bottom: 2rem;
   width: 100%;
   font-weight: bold;

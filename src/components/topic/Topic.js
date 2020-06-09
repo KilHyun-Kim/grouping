@@ -4,6 +4,7 @@ import Responsive from "../common/Responsive";
 import TopicSearchBlock from "./search/TopicSerchBlock";
 import TopicInfo from "./info/TopicInfo";
 import palette from "../../lib/styles/palette";
+import Button from "../common/Button";
 const TopicBlock = styled(Responsive)`
   width: 80%;
   height: auto;
@@ -11,38 +12,20 @@ const TopicBlock = styled(Responsive)`
   padding: 0;
   display: flex;
   flex-direction: column;
-  .topicMargin {
-    text-align: center;
-    padding-right: 65%;
-  }
 `;
 
 const TopicWrapper = styled.div`
-  width: 100%;
-  height: 2rem;
+  width: 90%;
   top: 5rem;
   color: ${palette.blue[0]};
-  margin: 5rem auto 2rem;
-  font-size: 2rem;
+  margin: 5rem auto 1rem;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
   h2 {
     margin: 0;
-    letter-spacing: 1px;
   }
 `;
-
-// event 함수
-
-// const onMouseSearchEnter = (e) => {
-//   const buttonTarget = e.target;
-// };
-
-// const onMouseSearchLeave = (e) => {
-//   const buttonTarget = e.target;
-//   buttonTarget.style.backgroundColor = "white";
-//   buttonTarget.style.color = "skyblue";
-//   buttonTarget.style.fontSize = "1rem";
-//   buttonTarget.style.fontWeight = "bold";
-// };
 
 const Topic = ({ topic }) => {
   return (
@@ -51,8 +34,12 @@ const Topic = ({ topic }) => {
         <div className="topicMargin">
           <h2>{topic}</h2>
         </div>
+        <div>
+          <Button>글 등록하기</Button>
+        </div>
       </TopicWrapper>
       <TopicSearchBlock />
+
       <TopicInfo />
     </TopicBlock>
   );

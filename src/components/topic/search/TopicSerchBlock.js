@@ -5,11 +5,12 @@ import TopicScrollBlock from "./TopicScrollBlock";
 import TopicCheckBoxBlock from "../region/TopicCheckBoxBlock";
 import TopicCareerBlock from "./TopicCareerBlock";
 import palette from "../../../lib/styles/palette";
+import Button from "../../common/Button";
 
 const SearchBlock = styled.div`
   width: 100%;
   height: auto;
-  margin-top: 4rem;
+  margin-top: 2rem;
 `;
 
 const TopicSearchWrapper = styled.div`
@@ -29,6 +30,7 @@ const TopicSearchDivBox = styled.div`
   height: 13rem;
   color: #000;
 `;
+const TopicSearchButton = styled(Button)``;
 
 const TopicSerchBlock = () => {
   return (
@@ -41,6 +43,7 @@ const TopicSerchBlock = () => {
         <TopicCheckBoxBlock />
         <TopicCareerBlock />
       </TopicSearchDivBox>
+      <TopicSearchButton>검색하기</TopicSearchButton>
     </SearchBlock>
   );
 };

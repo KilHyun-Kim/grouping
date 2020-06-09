@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../components/common/Header";
 import Topic from "../components/topic/Topic";
+import HeaderContainer from "../containers/common/HeaderContainer";
 
 const JobPage = () => {
   return (
     <>
-      <Header type="job" logoType="웹 개발자" />
+      <HeaderContainer type="job" logoType="웹 개발자" />
       <Topic topic="Web Designer" />
       {/* <PostListContainer />
       <PaginationContainer /> */}

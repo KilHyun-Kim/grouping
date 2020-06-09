@@ -19,12 +19,12 @@ function App() {
         <title>GroupingPong</title>
       </Helmet>
       <Route component={WebPage} path="/web" exact />
-      <Route component={JobPage} path="/web/designer" />
+      <Route component={JobPage} path="/web/designer" exact />
       <Route component={PostPage} path="/@:username/:postId" />
       <Route component={LoginPage} path="/login" />
       <Route component={RegisterPage} path="/register" />
       <Route component={WritePage} path="/write" />
-      <Route component={PostListPage} path={["/@:username", "/"]} exact />
+      {/* <Route component={PostListPage} path={["/@:username", "/"]} exact /> */}
     </>
   );
 }

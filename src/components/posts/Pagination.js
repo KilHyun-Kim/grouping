@@ -11,7 +11,10 @@ const PaginationBlock = styled.div`
   margin-bottom: 3rem;
 `;
 
-const PageNumber = styled.div``;
+const PageNumber = styled.div`
+  font-size: 2rem;
+  font-weight: bold;
+`;
 
 const buildLink = ({ page, lastPage, username, tag }) => {
   const query = qs.stringify({ tag, page });
