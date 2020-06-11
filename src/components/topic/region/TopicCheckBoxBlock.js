@@ -21,10 +21,10 @@ const CheckBoxBlock = styled.div`
     background-color: ${palette.blue[0]};
   }
   input[type="checkbox"] {
-    -ms-transform: scale(1.5); /* IE */
-    -moz-transform: scale(1.5); /* FF */
-    -webkit-transform: scale(1.5); /* Safari and Chrome */
-    -o-transform: scale(1.5); /* Opera */
+    -ms-transform: scale(1.2); /* IE */
+    -moz-transform: scale(1.2); /* FF */
+    -webkit-transform: scale(1.2); /* Safari and Chrome */
+    -o-transform: scale(1.2); /* Opera */
     padding: 10px;
     background-color: #fff;
     cursor: pointer;
@@ -40,6 +40,10 @@ const CheckBoxLi = styled.li`
   width: 30%;
   padding-top: 0.5rem;
   margin-left: 1rem;
+  font-size: 1rem;
+  label {
+    margin-left: 5px;
+  }
 `;
 
 const TopicCheckBoxBlock = () => {

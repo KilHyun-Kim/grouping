@@ -3,7 +3,8 @@ import styled from "styled-components";
 import TopicButtonList from "../TopicButtonList";
 import TopicScrollBlock from "./TopicScrollBlock";
 import TopicCheckBoxBlock from "../region/TopicCheckBoxBlock";
-import TopicCareerBlock from "./TopicCareerBlock";
+// import SearchButton from "./SearchButton";
+// import TopicCareerBlock from "./TopicCareerBlock";
 import palette from "../../../lib/styles/palette";
 import Button from "../../common/Button";
 
@@ -28,9 +29,15 @@ const TopicSearchDivBox = styled.div`
   width: 100%;
   margin: 0 auto;
   height: 13rem;
-  color: #000;
+  color: #111;
 `;
-const TopicSearchButton = styled(Button)``;
+
+const TopicSearchButtonBlock = styled.div`
+  text-align: right;
+  margin-top: 1rem;
+`;
+
+const SearchButton = styled(Button)``;
 
 const TopicSerchBlock = () => {
   return (
@@ -41,9 +48,11 @@ const TopicSerchBlock = () => {
       <TopicSearchDivBox>
         <TopicScrollBlock />
         <TopicCheckBoxBlock />
-        <TopicCareerBlock />
+        {/* <TopicCareerBlock /> */}
       </TopicSearchDivBox>
-      <TopicSearchButton>검색하기</TopicSearchButton>
+      <TopicSearchButtonBlock>
+        <SearchButton>검색하기</SearchButton>
+      </TopicSearchButtonBlock>
     </SearchBlock>
   );
 };

@@ -12,7 +12,7 @@ const RegionButton = styled.button`
   border: 0;
   background-color: white;
   text-align: left;
-  color: #000;
+  color: #333;
   display: flex;
   font-size: 1rem;
   justify-content: space-around;

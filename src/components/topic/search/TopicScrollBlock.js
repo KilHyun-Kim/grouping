@@ -10,6 +10,7 @@ const ScrollWrapper = styled.div`
   overflow: auto;
   position: relative;
   border-bottom-left-radius: 4px;
+
   ::-webkit-scrollbar {
     width: 11px;
     background-color: ${palette.blue[0]};

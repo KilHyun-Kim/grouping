@@ -19,7 +19,7 @@ const TopicWrapper = styled.div`
   top: 5rem;
   color: ${palette.blue[0]};
   margin: 5rem auto 1rem;
-  font-size: 1.8rem;
+  font-size: 3rem;
   display: flex;
   justify-content: space-between;
   h2 {

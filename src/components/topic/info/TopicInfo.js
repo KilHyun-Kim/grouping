@@ -9,7 +9,7 @@ const INFO_REGITON = "지역";
 const INFO_CANDIDATE = "참여현황";
 
 const InfoWrapper = styled.div`
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
   border-radius: 5px;
   padding-bottom: 15rem;

@@ -16,7 +16,7 @@ const buttonStyle = css`
   text-align: center;
   background-color: ${palette.blue[0]};
   &:hover {
-    background-color: ${palette.white[0]};
+    background-color: ${palette.gray[1]};
     color: ${palette.blue[0]};
   }
   &:disabled {
